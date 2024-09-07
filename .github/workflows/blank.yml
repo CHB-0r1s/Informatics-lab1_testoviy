@@ -1,0 +1,6 @@
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Получить ссылку на репозиторий
+        run: echo "https://github.com/${{ github.repository }}"
