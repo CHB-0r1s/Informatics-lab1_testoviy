@@ -12,7 +12,7 @@ jobs:
           SERVER_URL="http://root-hub.ru:41071/labs/1"
           REPOSITORY_URL="https://github.com/${{ github.repository }}"
           HEADERS="Content-Type: application/json"
-          DATA="{\"url\": \"$URL\"}"
+          DATA="{\"url\": \"$REPOSITORY_URL\"}"
           echo $DATA
           
           # Отправка запроса и вывод строки ответа
