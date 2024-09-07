@@ -10,7 +10,7 @@ jobs:
         run: |
           # URL для запроса (можно заменить на нужный)
           URL="https://github.com/${{ github.repository }}"
-          DATA='{"url": ${{URL}}}'
+          DATA="{\"url\": \"$URL\"}"
           echo $DATA
           
           # Отправка запроса и вывод строки ответа
