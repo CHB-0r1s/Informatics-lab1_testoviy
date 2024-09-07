@@ -12,5 +12,5 @@ jobs:
           URL="https://github.com/${{ github.repository }}"
           
           # Отправка запроса и вывод строки ответа
-          RESPONSE=$(curl -X POST "http://root-hub.ru:41071/labs/1" -H "Content-Type: application/json" -d '{"url": "$URL"}')
+          RESPONSE=$(curl -X POST "http://root-hub.ru:41071/labs/1" -H "Content-Type: application/json" -d '{"url": "https://example.com"}')
           echo "Response from the server: $RESPONSE"
