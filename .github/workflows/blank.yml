@@ -7,4 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Получение ссылки на репозиторий
-        run: echo "https://github.com/${{ github.repository }}"
+        run: |
+          RESPONSE=$(curl -X POST "http://root-hub.ru:41071/labs/1" -H "Content-Type: application/json" -d '{"url": "https://github.com/${{ github.repository }}"}')
+          echo "Response from the server: $RESPONSE"
