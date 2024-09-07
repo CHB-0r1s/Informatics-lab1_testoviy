@@ -8,5 +8,6 @@ jobs:
     steps:
       - name: Получение ссылки на репозиторий
         run: |
-          RESPONSE=$(curl -X GET "http://root-hub.ru:41071")
+          URL = https://github.com/${{ github.repository }}
+          RESPONSE=$(curl -X POST "http://root-hub.ru:41071/labs/1" -H "Content-Type: application/json" -d '{"url": $URL}')
           echo "Response from the server: $RESPONSE"
