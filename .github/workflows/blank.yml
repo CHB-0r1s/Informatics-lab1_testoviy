@@ -13,5 +13,5 @@ jobs:
           echo $URL
           
           # Отправка запроса и вывод строки ответа
-          RESPONSE=$(curl -X POST "http://root-hub.ru:41071/labs/1" -H "Content-Type: application/json" -d '{"url": "https://github.com/Anton-2228/Informatics-lab1"}')
+          RESPONSE=$(curl -X POST "http://root-hub.ru:41071/labs/1" -H "Content-Type: application/json" -d '{"url": \"$URL\"}')
           echo "Response from the server: $RESPONSE"
