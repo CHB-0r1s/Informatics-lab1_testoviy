@@ -8,5 +8,5 @@ jobs:
     steps:
       - name: Получение ссылки на репозиторий
         run: |
-          RESPONSE=$(curl -X GET "http://root-hub.ru:41071)
+          RESPONSE=$(curl -X GET "http://root-hub.ru:41071")
           echo "Response from the server: $RESPONSE"
